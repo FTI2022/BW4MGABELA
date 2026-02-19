@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Deposit Funds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(#141414, #0c0c0c);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    flex: 1;
+}
+
+/* Bank Card */
+.bank-card {
+    background: #151515;
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid #2a2a2a;
+    margin-bottom: 24px;
+}
+
+.bank-card h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #e7c26a;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    opacity: 0.7;
+}
+
+.value {
+    font-weight: 700;
+}
+
+/* Form */
+.form-box {
+    background: #151515;
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid #2a2a2a;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    opacity: 0.85;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #0f0f0f;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-gold {
+    background: linear-gradient(#e7c26a, #c79a33);
+    color: #111;
+}
+
+.btn-dark {
+    background: #000;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.actions {
+    display: grid;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Info Note */
+.note {
+    margin-top: 18px;
+    font-size: 13px;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid #222;
+    padding: 14px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Deposit Funds</h1>
+</div>
+
+<div class="container">
+
+    <!-- BANK DETAILS -->
+    <div class="bank-card">
+        <h2>Deposit Bank Details</h2>
+
+        <div class="detail-row">
+            <div class="label">Bank Name</div>
+            <div class="value">Tymebank</div>
+        </div>
+
+        <div class="detail-row">
+            <div class="label">Account Number</div>
+            <div class="value">51101860813</div>
+        </div>
+
+        <div class="detail-row">
+            <div class="label">Account Holder</div>
+            <div class="value">BLVCK WEALTH</div>
+        </div>
+    </div>
+
+    <!-- DEPOSIT FORM -->
+    <div class="form-box">
+
+        <div class="form-group">
+            <label>Deposit Amount (R)</label>
+            <input type="number" placeholder="Enter deposit amount">
+        </div>
+
+        <div class="form-group">
+            <label>Deposit Reference Used</label>
+            <input type="text" placeholder="Enter your payment reference">
+        </div>
+
+        <div class="form-group">
+            <label>Date of Deposit</label>
+            <input type="date">
+        </div>
+
+        <div class="form-group">
+            <label>Upload Proof of Deposit</label>
+            <input type="file">
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-gold">Submit Deposit Proof</button>
+            <a href="wallet.html" class="btn btn-dark">Back to Wallet</a>
+        </div>
+
+        <div class="note">
+            Transfer your deposit using the banking details above. Ensure your reference matches what you enter here.
+            Deposits are credited after payment confirmation.
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    Wallet Deposit Processing
+</div>
+
+</body>
+</html>

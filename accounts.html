@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Accounts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(#141414, #0c0c0c);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    flex: 1;
+}
+
+/* Account Card */
+.account-card {
+    background: #151515;
+    border-radius: 16px;
+    padding: 22px;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.account-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #e7c26a;
+    margin-bottom: 14px;
+}
+
+/* Detail Rows */
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+    font-size: 15px;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    opacity: 0.7;
+}
+
+.value {
+    font-weight: 700;
+}
+
+/* Badge */
+.badge {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #2a2108;
+    border: 1px solid #5a4310;
+    color: #f1d48a;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Buttons */
+.actions {
+    margin-top: 24px;
+    display: grid;
+    gap: 12px;
+    max-width: 320px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.btn-gold {
+    background: linear-gradient(#e7c26a, #c79a33);
+    color: #111;
+}
+
+.btn-dark {
+    background: #000;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+/* Bottom Nav */
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background: #0a0a0a;
+    border-top: 1px solid #222;
+    padding: 14px 0;
+    font-size: 13px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.nav a.active {
+    color: #e7c26a;
+    font-weight: 700;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Accounts</h1>
+</div>
+
+<div class="container">
+
+    <!-- AVAILABLE ACCOUNT -->
+    <div class="account-card">
+        <div class="account-title">Available Account</div>
+
+        <div class="detail-row">
+            <div class="label">Account Holder</div>
+            <div class="value">Mr M Gabela</div>
+        </div>
+
+        <div class="detail-row">
+            <div class="label">Account Type</div>
+            <div class="value">Short Term Account</div>
+        </div>
+
+        <span class="badge">Active</span>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+        <a href="deposit.html" class="btn btn-gold">Deposit to Account</a>
+        <a href="withdraw.html" class="btn btn-dark">Withdraw from Account</a>
+        <a href="wallet.html" class="btn btn-dark">Back to Wallet</a>
+    </div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<div class="nav">
+    <a href="wallet.html">Home</a>
+    <a href="accounts.html" class="active">Accounts</a>
+    <a href="cards.html">Cards</a>
+    <a href="docs.html">Docs</a>
+    <a href="more.html">More</a>
+</div>
+
+</body>
+</html>

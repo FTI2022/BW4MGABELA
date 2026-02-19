@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login — BLVCK WEALTH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0c0c0c, #1a1a1a);
+    color: #fff;
+}
+
+/* Login Card */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: #141414;
+    border-radius: 18px;
+    padding: 32px 28px;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+/* Animated Welcome Text */
+.welcome {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #e7c26a, #ffffff, #e7c26a);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Form */
+.form-group {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    opacity: 0.85;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #0f0f0f;
+    color: #fff;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #e7c26a;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 800;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    background: linear-gradient(#e7c26a, #c79a33);
+    color: #111;
+}
+
+/* Error */
+.error {
+    margin-top: 12px;
+    color: #ff6b6b;
+    font-size: 13px;
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-card">
+
+    <!-- LOGO -->
+    <img src="images/logo.png" alt="Logo" class="logo">
+
+    <!-- ANIMATED TEXT -->
+    <div class="welcome">Welcome Mr Gabela</div>
+
+    <!-- LOGIN FORM -->
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+    </div>
+
+    <button class="btn" onclick="login()">Log In</button>
+
+    <div class="error" id="errorMsg">
+        Invalid username or password
+    </div>
+
+</div>
+
+<script>
+function login() {
+    const u = document.getElementById("username").value;
+    const p = document.getElementById("password").value;
+
+    const validUser = "Mkhonzeni4BLVCK";
+    const validPass = "Gabela@WEALTH";
+
+    if (u === validUser && p === validPass) {
+        window.location.href = "wallet.html";
+    } else {
+        document.getElementById("errorMsg").style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
